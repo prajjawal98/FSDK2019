@@ -61,6 +61,29 @@ print (regressor.coef_)
 print( regressor.predict(10))
 
 
+#for on model to two labels
+
+features = dataset.iloc[:, :-2].values  
+labels = dataset.iloc[:, 1:3].values 
+
+
+from sklearn.linear_model import LinearRegression  
+regressor = LinearRegression()  
+regressor.fit(features, labels) 
+
+print(regressor.intercept_)  
+print (regressor.coef_)
+
+print( regressor.predict(10))
+"""
+print(" for bahubali ",regressor.predict(10)[0][0])
+print(" for bahubali ",regressor.predict(10)[0][1])
+
+
+"""
+
+
+
 
 
 
